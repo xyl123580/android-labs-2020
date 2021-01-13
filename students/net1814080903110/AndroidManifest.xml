@@ -3,14 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.hzuapps.androidlabs.net">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity android:name="edu.hzuapps.androidlabs.net.TestEditScheduleActivity"></activity>
+
+
+
+
+
         <activity android:name="edu.hzuapps.androidlabs.net.TestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,6 +59,40 @@
             </intent-filter>
         </activity>
 
+
+
+
+        <activity android:name="edu.hzuapps.androidlabs.net.HttpClientActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="edu.hzuapps.androidlabs.net.HttpClientUIActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="edu.hzuapps.androidlabs.net.FileDownloadActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <receiver android:name=".AlarmReceiver"
+            tools:ignore="WrongManifestParent"></receiver>
+        <activity android:name="PlayAlarmAty" android:screenOrientation="portrait"
+            tools:ignore="WrongManifestParent"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:ignore="WrongManifestParent" />
+
 
 </manifest>
